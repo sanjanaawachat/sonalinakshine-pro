@@ -1,11 +1,10 @@
-li a{
+li a {
   text-decoration: none;
   font-size: 17px;
- 
 }
-li a:hover{
- font-weight: bold;
- color: yellow;
+li a:hover {
+  font-weight: bold;
+  color: yellow;
 }
 
 @media (max-width: 1199px) {
@@ -116,44 +115,78 @@ li a:hover{
 }
 
 .bar {
-    padding: 10px;
-    background-color: #3498db;
+  padding: 10px;
+  background-color: #3498db;
+  color: white;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+i.mobile-nav-toggle.menu {
+  display: none;
+}
+@media (max-width: 1199px) {
+  i.mobile-nav-toggle.menu {
+    display: block;
+  }
+}
+
+@media (max-width: 1199px) {
+  i.mobile-nav-toggle.menu {
+    color: #fff;
+    position: absolute;
+    font-size: 32px;
+    top: 15px;
+    right: 15px;
+    margin-right: 0;
+    z-index: 9999;
+  }
+}
+
+.bi::before,
+[class^="bi-"]::before,
+[class*=" bi-"]::before {
+  display: inline-block;
+  font-family: bootstrap-icons !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: -0.125em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+i.menu {
+  display: none;
+  cursor: pointer;
+}
+.sidebar p li {
+  display: none;
+}
+@media (max-width: 1199px) {
+  .sidebar {
+    width: 250px;
+    height: 100vh;
+    margin: 0px;
+    top: 0%;
+    cursor: pointer;
+    list-style-type: none;
+    background-color: rgb(180, 243, 90);
     color: white;
-    margin-top: 10px;
-    border-radius: 5px;
+    position: fixed;
+    left: -250px;
+    transition: left 0.3s ease-in-out;
+    padding: 15px;
+  }
+  .sidebar.open {
+    left: 0;
   }
 
-
-   i.mobile-nav-toggle.menu  {
-      display: none;
-    }
-    @media (max-width: 1199px) {
-        i.mobile-nav-toggle.menu {
-            display: block;
-        }
-    }
-
-    @media (max-width: 1199px) {
-        i.mobile-nav-toggle.menu{
-            color: #fff;
-            position: absolute;
-            font-size: 32px;
-            top: 15px;
-            right: 15px;
-            margin-right: 0;
-            z-index: 9999;
-        }
-    }
-
-    .bi::before, [class^="bi-"]::before, [class*=" bi-"]::before {
-        display: inline-block;
-        font-family: bootstrap-icons !important;
-        font-style: normal;
-        font-weight: normal !important;
-        font-variant: normal;
-        text-transform: none;
-        line-height: 1;
-        vertical-align: -.125em;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-    }
+  i.menu {
+    display: block;
+  }
+  .sidebar p li {
+    display: block;
+  }
+}

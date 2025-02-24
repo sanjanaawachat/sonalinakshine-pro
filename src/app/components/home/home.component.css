@@ -65,7 +65,7 @@ svg {
 }
 h1 :hover{
   cursor: pointer;
-font-size: 70px;
+font-size: 30px;
 color: yellow;
 text-decoration: none;
 }
